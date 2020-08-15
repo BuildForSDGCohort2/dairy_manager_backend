@@ -1,5 +1,7 @@
 ## About Dairy Manager
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/574bdf2013044a4eb0a266e0b2b5df6b)](https://app.codacy.com/gh/BuildForSDGCohort2/dairy_manager_backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/dairy_manager_backend&utm_campaign=Badge_Grade_Dashboard)
+
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
