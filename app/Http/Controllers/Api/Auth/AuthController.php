@@ -34,8 +34,10 @@ class AuthController extends Controller
         $request['remember_token'] = Str::random(10);
         $user = User::create($request->toArray());
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-        $response = ['token' => $token];
-        return response($response, 200);
+        return response([
+            'message' => 'Successfully created user!',
+            'token' => $token,
+        ], 201);
 
     }
 
