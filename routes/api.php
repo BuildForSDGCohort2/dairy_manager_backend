@@ -19,6 +19,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('v1')->group(function(){
-    Route::post('login', 'Api\AuthController@login');
-    Route::post('register', 'Api\AuthController@register');
+
+    Route::group(['prefix' => 'auth'], function () {
+//    Unprotected routes
+        Route::post('login', 'Api\Auth\AuthController@login');
+        Route::post('register', 'Api\Auth\AuthController@register');
+
+        Route::middleware('auth:api')->group(function () {
+            // our routes to be protected will go in here
+            Route::post('logout', 'Api\Auth\AuthController@logout');
+        });
+    });
 });
